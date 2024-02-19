@@ -1,0 +1,11 @@
+{
+  "files": {
+    "main.css": "/DirectGPT/static/css/main.9257ad2b.css",
+    "main.js": "/DirectGPT/static/js/main.14dd2111.js",
+    "index.html": "/DirectGPT/index.html"
+  },
+  "entrypoints": [
+    "static/css/main.9257ad2b.css",
+    "static/js/main.14dd2111.js"
+  ]
+}
