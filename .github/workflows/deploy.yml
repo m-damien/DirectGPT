@@ -14,6 +14,7 @@ jobs:
       - run: npm i
       - run: npm run build
         env:
+          PUBLIC_URL: https://damienmasson.com/DirectGPT 
           CI: false # Do not treat warnings as errors
       - run: touch build/.nojekyll
       - name: Push
