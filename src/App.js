@@ -131,7 +131,7 @@ There was nothing so _very_ remarkable in that; nor did Alice think it so _very_
 
   ],
   {
-    basename: "DirectGPT"
+    basename: "/DirectGPT/"
   }
   );
 
