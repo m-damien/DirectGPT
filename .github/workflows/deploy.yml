@@ -13,6 +13,8 @@ jobs:
           node-version: 20
       - run: npm i
       - run: npm run build
+        env:
+          CI: false # Do not treat warnings as errors
       - run: touch build/.nojekyll
       - name: Push
         uses: s0/git-publish-subdir-action@develop
