@@ -201,7 +201,8 @@ export default function PromptBuilder(props: { style?: React.CSSProperties, drag
               id={props.id}
               innerRef={editableContentRef}
               className="editable-cursor"
-              placeholder="Type your prompt here."
+              // @ts-ignore
+              placeholder={"Type your prompt here."}
               style={
                 {
                   width: '100%', boxSizing: 'border-box',
