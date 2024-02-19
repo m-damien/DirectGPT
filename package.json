@@ -1,0 +1,61 @@
+{
+  "name": "directgpt",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.4.0",
+    "@fortawesome/free-solid-svg-icons": "^6.4.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@types/node": "^20.3.2",
+    "@types/react": "^18.2.14",
+    "@types/react-dom": "^18.2.6",
+    "diff": "^5.1.0",
+    "openai": "^4.1.0",
+    "prismjs": "^1.29.0",
+    "react": "^18.2.0",
+    "react-contenteditable": "^3.3.7",
+    "react-dom": "^18.2.0",
+    "react-markdown": "^8.0.7",
+    "react-medium-image-zoom": "^5.1.8",
+    "react-router-dom": "^6.14.1",
+    "react-scripts": "^5.0.1",
+    "react-syntax-highlighter": "^15.5.0",
+    "react-tabs": "^6.0.2",
+    "typescript": "^5.1.6",
+    "web-vitals": "^2.1.4",
+    "zustand": "^4.3.8"
+  },
+  "overrides": {
+    "react-scripts": {
+      "typescript": "^5"
+    }
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "GENERATE_SOURCEMAP=false react-scripts build",
+    "deploy": "PUBLIC_URL=https://damienmasson.com/DirectGPT react-scripts build",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/diff": "^5.0.3",
+    "@types/prismjs": "^1.26.0",
+    "@types/react-syntax-highlighter": "^15.5.7"
+  }
+}

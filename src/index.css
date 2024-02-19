@@ -1,0 +1,159 @@
+body {
+  margin: 0;
+  font-family: Söhne,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,Helvetica Neue,Arial,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+}
+
+
+.word-chunk:hover {
+  background-color: #f2ebd7;
+  cursor: pointer;
+}
+
+.sentence-chunk:hover {
+  background-color: #dccea9;
+  cursor: pointer;
+  padding: 10px;
+}
+
+[contenteditable=true]:empty:before{
+  content: attr(placeholder);
+  pointer-events: none;
+  display: block; /* For Firefox */
+  color: gray;
+}
+
+.draggable {
+  cursor: move;
+  user-select: none;
+}
+
+.editable-cursor {
+  cursor: text;
+}
+
+.text-in-prompt {
+  background: #dddddd;
+  border: 1px solid #cacaca;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.prompt-builder {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  margin: 20px;
+  border: 1px solid #d9d9e3;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.editable-cursor:focus {
+  outline: none !important;
+}
+
+.loading {
+  animation: pulseanim 1.2s ease-in-out infinite;
+}
+
+.dark-clickable:hover {
+  cursor: pointer;
+  color: rgb(200, 200, 200) !important
+}
+
+.dark-hoverable:hover {
+  background: rgb(38, 38, 44) !important
+}
+
+
+@keyframes pulseanim {
+  0% { opacity: 1;}
+  50% { opacity: 0.2;}
+  100% {  opacity: 1;}
+}
+
+.prompt-pronoun {
+  background-color: #f2ebd7;
+}
+
+.left-tag-button {
+  background: none;
+  border: none;
+  height: 100%;
+  border-right: 2px solid #00000058;
+}
+
+.left-tag-button:hover {
+  color: white;
+  cursor: pointer;
+}
+
+
+.reusablePromptButton {
+  border: none;
+  border-radius: 4px;
+  color: rgb(6, 6, 6);
+  text-align: left;
+  height: 30px;
+}
+
+.reusablePromptButton:hover {
+  background: #d8d8d8;
+  cursor: pointer;
+}
+
+.reusablePromptButton:active {
+  background: #bcbcbc !important;
+  cursor: pointer;
+  /* Add a shadow inset to show the button is pressed */
+  box-shadow: rgba(0, 0, 0, 0.75) 0px 2px 4px -2px inset;
+}
+
+
+.clickable {
+  cursor: pointer;
+}
+
+.droppable {
+  cursor: copy;
+}
+
+.shineOnHover:hover {
+  background-color: #d1ba7a;
+}
+
+.useNiceCodingFont {
+  font-family: 'Monaco', 'Andale Mono', 'Ubuntu Mono', monospace;
+}
+
+.selectedText {
+  /*background: rgba(186, 122, 26, 0.6);
+  background: rgba(255, 226, 183, 1);*/
+
+  background: rgba(129, 189, 255, 0.6);
+}
+
+
+.simpleButton {
+  border: none;
+  border-radius: 4px;
+  color: rgb(6, 6, 6);
+  text-align: left;
+  height: 30px;
+  cursor: pointer;
+}
+
+.simpleButton:disabled {
+  background: none;
+  color: #d8d8d8;
+  cursor: not-allowed;
+}
+
+.simpleButton:hover {
+  background: #d8d8d8;
+}
+
+.simpleButton:disabled:hover {
+  background: none;
+}
