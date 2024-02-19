@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useModelStore } from '../model/Model';
 import { useStudyModelStore } from "./study/StudyModel";
+import GithubCorner from "react-github-corner";
 
 export default function Launcher(props: { children: React.ReactNode, leftSide?: React.ReactNode }) {
   const [accessKey, setAccessKey] = useState('');
@@ -13,6 +14,7 @@ export default function Launcher(props: { children: React.ReactNode, leftSide?: 
 
   // Three big buttons to start text, code and image
   return <div className="short-pulse" style={{ display: 'flex', flexDirection: 'column', height: '100vh', alignItems: 'center', justifyContent: 'center', width: '100%' }}>
+    <GithubCorner href="https://github.com/m-damien/DirectGPT"/>
     <h1>OpenAI API key</h1>
     <span style={{ fontSize: 25 }}>To run the examples below, please paste an OpenAI API key. You can obtain one from <a href="https://platform.openai.com/account/api-keys">here</a>.</span>
     <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', gap: 30}}>
