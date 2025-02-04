@@ -5,7 +5,7 @@ import GithubCorner from "react-github-corner";
 
 export default function Launcher(props: { children: React.ReactNode, leftSide?: React.ReactNode }) {
   const [accessKey, setAccessKey] = useState('');
-  const [gptModel, setStoredGptModel] = useState('gpt-4-1106-preview');
+  const [gptModel, setStoredGptModel] = useState('gpt-4o');
   const setGptModel = useModelStore((state) => state.setGptModel);
   const setOpenAIKey = useModelStore((state) => state.setOpenAIKey);
   const resetModel = useModelStore((state) => state.reset);
@@ -26,17 +26,20 @@ export default function Launcher(props: { children: React.ReactNode, leftSide?: 
         }
       } />
       {/* Choice box to choose the model to use */}
-      <select id="modelSelectBox" value={gptModel} style={{ width: 200, height: 50, marginTop: 10, borderRadius: 5, fontSize: 20, fontWeight: 'bold' }} onChange={
+      <input list="modelSelectBox" name="modelSelectBox" value={gptModel} style={{ width: 200, height: 50, marginTop: 10, borderRadius: 5, fontSize: 20, fontWeight: 'bold' }} onChange={
         (event) => {
           // set open ai key
           setStoredGptModel(event.target.value);
           setGptModel(event.target.value);
-        }
-      }
-      >
-        <option value="gpt-4-1106-preview">gpt-4-turbo</option>
-        <option value="gpt-3.5-turbo">gpt-3.5-turbo</option>
-      </select>
+        }} />
+      
+      <datalist id="modelSelectBox">
+        <option value="gpt-4o"></option>
+        <option value="o1-mini"></option>
+        <option value="o3-mini"></option>
+        <option value="o1"></option>
+        <option value="gpt-3.5-turbo"></option>
+      </datalist>
     </div>
 
 
